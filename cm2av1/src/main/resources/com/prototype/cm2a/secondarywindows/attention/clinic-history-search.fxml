@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="1005.0" prefWidth="1920.0" stylesheets="@../../styles/history.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prototype.cm2a.controllers.history.ClinicHistorySearchController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="250.0" prefWidth="1920.0" style="-fx-background-color: #3F84B7;">
+            <children>
+                <VBox alignment="CENTER" prefHeight="421.0" prefWidth="470.0" spacing="20.0">
+                    <children>
+                        <Label text="CONSULTORIO MÉDICO" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <Label text="&quot;2 DE ABRIL&quot;" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <Pane prefHeight="250.0" prefWidth="290.0" />
+                <ImageView fitHeight="239.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/logo-icon.png" />
+                    </image>
+                </ImageView>
+                <Pane prefHeight="200.0" prefWidth="359.0" />
+                <Pane prefHeight="264.0" prefWidth="400.0">
+                    <children>
+                        <HBox prefHeight="250.0" prefWidth="400.0">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label fx:id="lblNames" text="LEONELA ESTEFANIA" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblSurnames" text="SAMUISA TIPAN" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblPosition" text="Medico General" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label fx:id="lblPermission" text="ADMINISTRADOR" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#logOut" text="Cerrar Sesión" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <Pane layoutY="249.0" prefHeight="758.0" prefWidth="1920.0">
+            <children>
+                <MenuBar fx:id="menuModules" prefHeight="50.0" prefWidth="1920.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Pacientes">
+                            <items>
+                                <MenuItem fx:id="btnRegisterPacient" mnemonicParsing="false" onAction="#openRegisterPacient" text="Registrar" />
+                                <MenuItem fx:id="btnQueryPacient" mnemonicParsing="false" onAction="#openQueryPacient" text="Consultar / Actualizar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Atención Médica">
+                            <items>
+                                <MenuItem fx:id="btnRegisterClinicHistory" mnemonicParsing="false" onAction="#openRegisterClinicHistory" text="Registrar Historia Clínica" />
+                                <MenuItem fx:id="btnRegisterMedicalAttention" mnemonicParsing="false" onAction="#openRegisterMedicalAttention" text="Registrar Atención Médica" />
+                                <MenuItem fx:id="btnQueryClinicHistory" mnemonicParsing="false" onAction="#openQueryClinicHistory" text="Consultar Historia Clínica" />
+                                <MenuItem fx:id="btnRegisterTypeMedicalAttention" mnemonicParsing="false" onAction="#openRegisterTypeMedicalAttention" text="Registrar tipo de Atención Médica" />
+                                <MenuItem fx:id="btnSearchTypeMedicalAttention" mnemonicParsing="false" onAction="#openSearchTypeMedicalAttention" text="Consultar / Actualizar tipo de Atención Médica" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Medicamentos">
+                            <items>
+                                <MenuItem fx:id="btnRegisterMedicament" mnemonicParsing="false" onAction="#openRegisterMedicament" text="Registrar" />
+                                <MenuItem fx:id="btnQueryMedicament" mnemonicParsing="false" onAction="#openQueryMedicament" text="Consultar / Actualizar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Facturación">
+                            <items>
+                                <MenuItem fx:id="btnGenerateBilling" mnemonicParsing="false" onAction="#openGenerateBilling" text="Generar" />
+                                <MenuItem fx:id="btnQueryBilling" mnemonicParsing="false" onAction="#openQueryBilling" text="Consultar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Administración del Sistema">
+                            <items>
+                                <Menu mnemonicParsing="false" text="Administración de Usuarios">
+                                    <items>
+                                        <MenuItem fx:id="btnRegisterUser" mnemonicParsing="false" onAction="#openRegisterUser" text="Registrar" />
+                                        <MenuItem fx:id="btnQueryUser" mnemonicParsing="false" onAction="#openQueryUser" text="Consultar / Actualizar" />
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <Menu mnemonicParsing="false" text="Administración de Parámetros">
+                                    <items>
+                                        <MenuItem fx:id="btnRegisterParameter" mnemonicParsing="false" onAction="#openRegisterParameter" text="Registrar" />
+                                        <MenuItem fx:id="btnQueryParameter" mnemonicParsing="false" onAction="#openQueryParameter" text="Consultar / Actualizar" />
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <Menu mnemonicParsing="false" text="Auditoria">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Registrar" />
+                                    </items>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            <HBox fx:id="hBoxRectangle" alignment="CENTER" layoutY="50.0" prefHeight="70.0" prefWidth="1920.0" spacing="15.0">
+               <children>
+                        <Label fx:id="titleModule" text="Gestión de Historias Clínicas" textFill="#ab6e6e">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <Pane prefHeight="70.0" prefWidth="200.0" />
+                        <TextField fx:id="txtFSearch" prefHeight="40.0" prefWidth="416.0" promptText="Ingrese los apellidos y nombres para buscar la historia clinica">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                        <Pane prefHeight="100.0" prefWidth="500.0">
+                     <children>
+                              <ImageView fx:id="imgSearchIcon" fitHeight="150.0" fitWidth="40.0" layoutX="-3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../../images/search-icon-v2.png" />
+                                  </image>
+                              </ImageView>
+                     </children></Pane>
+                        <Label fx:id="lblHour" text="dd/mm/yyyy" textFill="#ab6e6e">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+               </children>
+            </HBox>
+            </children>
+        </Pane>
+      <Pane layoutY="370.0" prefHeight="638.0" prefWidth="1920.0">
+         <children>
+            <ImageView fitHeight="638.0" fitWidth="1920.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/background-dash.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnBackHome" alignment="CENTER" layoutX="1569.0" layoutY="14.0" mnemonicParsing="false" onAction="#openDashboardHome" prefHeight="40.0" prefWidth="174.0" text="Volver al Inicio">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/home-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="tableClinicHistory" layoutX="373.0" layoutY="71.0" prefHeight="456.0" prefWidth="1180.0">
+              <columns>
+                <TableColumn fx:id="columnCode" minWidth="50.0" prefWidth="75.0" text="Código" />
+                <TableColumn fx:id="columnIdentityCard" minWidth="205.0" prefWidth="75.0" text="N° de cédula del Paciente" />
+                  <TableColumn fx:id="columnnNamesPacient" minWidth="300.0" prefWidth="75.0" text="Nombres del Paciente" />
+                  <TableColumn fx:id="columnLastnamesPacient" minWidth="300.0" prefWidth="75.0" text="Apellidos del Paciente" />
+                  <TableColumn fx:id="columnDoctorName" minWidth="300.0" prefWidth="75.0" text="Nombres del Médico" />
+              </columns>
+            </TableView>
+             <HBox alignment="CENTER" layoutX="610.0" layoutY="550.0" prefHeight="57.0" prefWidth="700.0" spacing="40.0">
+                 <children>
+                     <Button fx:id="btnViewMore" alignment="CENTER" mnemonicParsing="false" onAction="#viewMore" prefHeight="40.0" prefWidth="174.0" text="Ver más">
+                         <font>
+                             <Font name="Arial" size="14.0" />
+                         </font>
+                         <graphic>
+                             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../../images/view-more-v2.png" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                     </Button>
+                 </children>
+             </HBox>
+         </children>
+      </Pane>
+    </children>
+</Pane>

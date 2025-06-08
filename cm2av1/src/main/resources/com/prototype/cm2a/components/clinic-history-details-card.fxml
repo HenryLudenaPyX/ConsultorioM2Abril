@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="1615.0" stylesheets="@../styles/history.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prototype.cm2a.components.ClinicHistoryDetailsCard">
+   <children>
+      <HBox layoutX="14.0" prefHeight="563.0" prefWidth="780.0">
+         <children>
+            <VBox prefHeight="510.0" prefWidth="780.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" styleClass="label-item" text="Historia clínica">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="90.0" styleClass="label-item" text="# de hoja">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="130.0" styleClass="label-item" text="Cédula">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="170.0" styleClass="label-item" text="Nombres">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="170.0" styleClass="label-item" text="Apellidos">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="120.0" styleClass="label-item" text="Establecimiento" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="22.0" prefWidth="780.0">
+                     <children>
+                        <TextField fx:id="txtCodeClinicHistory" alignment="CENTER" editable="false" prefWidth="100.0" styleClass="textf-item" />
+                        <TextField fx:id="txtNumberSheet" alignment="CENTER" editable="false" prefWidth="90.0" styleClass="textf-item" />
+                        <TextField fx:id="txtCardNumber" alignment="CENTER" editable="false" prefWidth="130.0" styleClass="textf-item" />
+                        <TextField fx:id="txtNamesPacient" alignment="CENTER" editable="false" prefWidth="170.0" styleClass="textf-item" />
+                        <TextField fx:id="txtLastnamesPacient" alignment="CENTER" editable="false" prefWidth="170.0" styleClass="textf-item" />
+                        <TextField fx:id="txtEstablishment" alignment="CENTER" editable="false" prefWidth="120.0" styleClass="textf-item" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="15.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="830.0" styleClass="label-item" text="1 Motivo de Consulta" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="780.0">
+                     <children>
+                        <TextArea fx:id="txtReasonConsultation" editable="false" prefHeight="22.0" prefWidth="780.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="2 Antecedentes Personales" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <TextArea fx:id="txtPersonalAntecedents" editable="false" prefHeight="50.0" prefWidth="830.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="3 Antecedentes familiares" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <TextArea fx:id="txtFamiliarAntecedents" editable="false" prefHeight="50.0" prefWidth="830.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="4 Enfermedad o problema actual" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <TextArea fx:id="txtDisease" editable="false" prefHeight="50.0" prefWidth="830.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="5 Revisión actual de órganos y sistemas" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <TextArea fx:id="txtCurentRevision" editable="false" prefHeight="50.0" prefWidth="830.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="820.0" prefHeight="563.0" prefWidth="780.0">
+         <children>
+            <VBox prefHeight="563.0" prefWidth="867.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="830.0" styleClass="label-item" text="6 Signos vitales" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="161.0" styleClass="label-item" text="Fecha">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="25.0" prefWidth="160.0" styleClass="label-item" text="Presión Arterial">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="25.0" prefWidth="160.0" styleClass="label-item" text="Pulso x min">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                              <Label prefHeight="25.0" prefWidth="160.0" styleClass="label-item" text="Temperatura C">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker fx:id="dateVitalSigns" disable="true" editable="false" promptText="dd/mm/yyyy" styleClass="textf-item" />
+                              <TextField fx:id="pressureVitalSigns" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="pulseVitalSigns" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="temperatureVitalSigns" alignment="CENTER" editable="false" styleClass="textf-item" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker fx:id="dateVitalSigns1" disable="true" editable="false" promptText="dd/mm/yyyy" styleClass="textf-item" />
+                              <TextField fx:id="pressureVitalSigns1" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="pulseVitalSigns1" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="temperatureVitalSigns1" alignment="CENTER" editable="false" styleClass="textf-item" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker fx:id="dateVitalSigns2" disable="true" editable="false" promptText="dd/mm/yyyy" styleClass="textf-item" />
+                              <TextField fx:id="pressureVitalSigns2" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="pulseVitalSigns2" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="temperatureVitalSigns2" alignment="CENTER" editable="false" styleClass="textf-item" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker fx:id="dateVitalSigns3" disable="true" editable="false" promptText="dd/mm/yyyy" styleClass="textf-item" />
+                              <TextField fx:id="pressureVitalSigns3" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="pulseVitalSigns3" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="temperatureVitalSigns3" alignment="CENTER" editable="false" styleClass="textf-item" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="88.0" prefWidth="160.0">
+                           <children>
+                              <DatePicker fx:id="dateVitalSigns4" disable="true" editable="false" promptText="dd/mm/yyyy" styleClass="textf-item" />
+                              <TextField fx:id="pressureVitalSigns4" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="pulseVitalSigns4" alignment="CENTER" editable="false" styleClass="textf-item" />
+                              <TextField fx:id="temperatureVitalSigns4" alignment="CENTER" editable="false" styleClass="textf-item" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="7 Examen físico" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="857.0">
+                     <children>
+                        <TextArea fx:id="txtPhysycExam" editable="false" prefHeight="50.0" prefWidth="830.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="8 Diagnósticos" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="25.0" prefWidth="780.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="275.0" styleClass="label-item" />
+                        <Label prefHeight="25.0" prefWidth="62.0" styleClass="label-item" text="CIE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="50.0" styleClass="label-item" text="PRE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="50.0" styleClass="label-item" text="DEF">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="300.0" styleClass="label-item" text="PRE = PRESUNTIVO      DEF = DEFINITVO">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="47.0" styleClass="label-item" text="CIE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="49.0" styleClass="label-item" text="PRE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="46.0" styleClass="label-item" text="DEF">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="26.0" prefWidth="780.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="40.0" styleClass="label-item" text="1">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtDiagnosticName" editable="false" prefHeight="25.0" prefWidth="260.0" styleClass="textf-item" />
+                        <TextField fx:id="txtCodeCie" editable="false" prefHeight="25.0" prefWidth="62.0" styleClass="textf-item" />
+                        <ComboBox fx:id="txtOpcionPreDef" disable="true" prefHeight="27.0" prefWidth="100.0" styleClass="textf-item" />
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="40.0" styleClass="label-item" text="3">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtDiagnosticName1" editable="false" prefHeight="25.0" prefWidth="260.0" styleClass="textf-item" />
+                        <TextField fx:id="txtCodeCie1" editable="false" prefHeight="25.0" prefWidth="62.0" styleClass="textf-item" />
+                        <ComboBox fx:id="txtOpcionPreDef1" disable="true" prefHeight="27.0" prefWidth="100.0" styleClass="textf-item" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="26.0" prefWidth="780.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="40.0" styleClass="label-item" text="2">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtDiagnosticName2" editable="false" prefHeight="25.0" prefWidth="260.0" styleClass="textf-item" />
+                        <TextField fx:id="txtCodeCie2" editable="false" prefHeight="25.0" prefWidth="62.0" styleClass="textf-item" />
+                        <ComboBox fx:id="txtOpcionPreDef2" disable="true" prefHeight="27.0" prefWidth="100.0" styleClass="textf-item" />
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="40.0" styleClass="label-item" text="4">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtDiagnosticName3" editable="false" prefHeight="25.0" prefWidth="260.0" styleClass="textf-item" />
+                        <TextField fx:id="txtCodeCie3" editable="false" prefHeight="25.0" prefWidth="62.0" styleClass="textf-item" />
+                        <ComboBox fx:id="txtOpcionPreDef3" disable="true" prefHeight="27.0" prefWidth="100.0" styleClass="textf-item" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="28.0" prefWidth="857.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="831.0" styleClass="label-item" text="9 Planes de diagnóstico, terapéuticos y educacionales" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="76.0" prefWidth="780.0">
+                     <children>
+                        <TextArea fx:id="txtPlans" editable="false" prefHeight="84.0" prefWidth="780.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="780.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="28.0" prefWidth="140.0" styleClass="label-item" text="Fecha para control">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <DatePicker fx:id="txtDateControl" disable="true" editable="false" prefWidth="150.0" styleClass="textf-item" />
+                        <Label alignment="CENTER" prefHeight="28.0" prefWidth="50.0" styleClass="label-item" text="Hora">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtHourControl" alignment="CENTER" editable="false" prefHeight="28.0" prefWidth="100.0" styleClass="textf-item" />
+                        <Label alignment="CENTER" prefWidth="100.0" styleClass="label-item" text="Médico">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="txtNameDoctor" alignment="CENTER" editable="false" prefHeight="28.0" prefWidth="240.0" styleClass="textf-item" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>

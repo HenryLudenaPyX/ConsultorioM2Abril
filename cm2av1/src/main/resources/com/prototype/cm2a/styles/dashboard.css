@@ -1,0 +1,19 @@
+.menu-bar {
+    -fx-background-color: #91e2f8;
+    -fx-border-color: white;
+    -fx-alignment: center;
+    -fx-font-size: 16px;
+    -fx-font-family: Arial;
+    -fx-padding: 0;
+    -fx-spacing: 150px;
+}
+
+#btnLogOut {
+    -fx-background-color: #bddaf3;
+    -fx-background-radius: 20px;
+    -fx-pref-height: 20px;
+}
+
+#btnLogOut:hover {
+    -fx-background-color: #8cbaee;
+}

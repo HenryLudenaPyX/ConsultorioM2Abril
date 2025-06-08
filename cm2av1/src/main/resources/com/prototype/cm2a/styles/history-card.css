@@ -1,0 +1,16 @@
+#card {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, #bddaf3, 10, 0, 0, 0);
+}
+
+#btnViewMore, #btnAttention, #btnEdit, #btnUpdateMedicamentDetails, #btnUnsubscribe {
+    -fx-background-color: #bddaf3;
+    -fx-background-radius: 20px;
+    -fx-pref-height: 20px;
+}
+
+#btnViewMore:hover , #btnAttention:hover, #btnEdit:hover, #btnUpdateMedicamentDetails:hover, #btnUnsubscribe:hover{
+    -fx-background-color: #8cbaee;
+}
+

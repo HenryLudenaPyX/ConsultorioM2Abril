@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="240.0" style="-fx-border-radius: 10;" stylesheets="@../styles/history-card.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prototype.cm2a.components.PacientCard">
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="240.0" style="-fx-border-radius: 10;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="100.0">
+                            <children>
+                                <Label fx:id="lblCI" text="1234567890">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font></Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="100.0">
+                            <children>
+                                <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/register-icon.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin></HBox>
+                <Label fx:id="lblNames" prefHeight="30.0" prefWidth="200.0" text="Alejandro Emmanuel">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblSurnames" prefHeight="30.0" prefWidth="200.0" text="Zambrano Tipanluisa">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                </Label>
+                <HBox prefHeight="66.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/pacient-icon-v2.png" />
+                                    </image>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                                </ImageView>
+                            </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                        </VBox>
+                        <VBox prefHeight="64.0" prefWidth="130.0">
+                            <children>
+                                <Label fx:id="lblNationality" prefHeight="30.0" prefWidth="200.0" text="Ecuatoriano">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Arial Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lblPhone" prefHeight="30.0" prefWidth="200.0" text="telefono">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="29.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnViewMore" mnemonicParsing="false" onAction="#openViewMore" prefHeight="25.0" prefWidth="100.0" text="Ver mas">
+                            <graphic>
+                                <ImageView fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/info-icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                        </Button>
+                  <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#openEdit" prefHeight="25.0" prefWidth="100.0" text="Actualizar">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/update-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</Pane>

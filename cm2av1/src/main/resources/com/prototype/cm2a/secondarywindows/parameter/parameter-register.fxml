@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="1005.0" prefWidth="1920.0" stylesheets="@../../styles/pacient.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prototype.cm2a.controllers.parameter.ParameterRegisterController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="250.0" prefWidth="1920.0" style="-fx-background-color: #3F84B7;">
+            <children>
+                <VBox alignment="CENTER" prefHeight="421.0" prefWidth="470.0" spacing="20.0">
+                    <children>
+                        <Label text="CONSULTORIO MÉDICO" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <Label text="&quot;2 DE ABRIL&quot;" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <Pane prefHeight="250.0" prefWidth="290.0" />
+                <ImageView fitHeight="239.0" fitWidth="254.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/logo-icon.png" />
+                    </image>
+                </ImageView>
+                <Pane prefHeight="200.0" prefWidth="359.0" />
+                <Pane prefHeight="264.0" prefWidth="400.0">
+                    <children>
+                        <HBox prefHeight="250.0" prefWidth="400.0">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label fx:id="lblNames" text="LEONELA ESTEFANIA" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblSurnames" text="SAMUISA TIPAN" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblPosition" text="Medico General" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+                                    <children>
+                                        <Label fx:id="lblPermission" text="ADMINISTRADOR" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#logOut" text="Cerrar Sesión" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+        <Pane layoutY="249.0" prefHeight="758.0" prefWidth="1920.0">
+            <children>
+                <MenuBar fx:id="menuModules" prefHeight="50.0" prefWidth="1920.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Pacientes">
+                            <items>
+                                <MenuItem fx:id="btnRegisterPacient" mnemonicParsing="false" onAction="#openRegisterPacient" text="Registrar" />
+                                <MenuItem fx:id="btnQueryPacient" mnemonicParsing="false" onAction="#openQueryPacient" text="Consultar / Actualizar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Atención Médica">
+                            <items>
+                                <MenuItem fx:id="btnRegisterClinicHistory" mnemonicParsing="false" onAction="#openRegisterClinicHistory" text="Registrar Historia Clínica" />
+                                <MenuItem fx:id="btnRegisterMedicalAttention" mnemonicParsing="false" onAction="#openRegisterMedicalAttention" text="Registrar Atención Médica" />
+                                <MenuItem fx:id="btnQueryClinicHistory" mnemonicParsing="false" onAction="#openQueryClinicHistory" text="Consultar Historia Clínica" />
+                                <MenuItem fx:id="btnRegisterTypeMedicalAttention" mnemonicParsing="false" onAction="#openRegisterTypeMedicalAttention" text="Registrar tipo de Atención Médica" />
+                                <MenuItem fx:id="btnSearchTypeMedicalAttention" mnemonicParsing="false" onAction="#openSearchTypeMedicalAttention" text="Consultar / Actualizar tipo de Atención Médica" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Medicamentos">
+                            <items>
+                                <MenuItem fx:id="btnRegisterMedicament" mnemonicParsing="false" onAction="#openRegisterMedicament" text="Registrar" />
+                                <MenuItem fx:id="btnQueryMedicament" mnemonicParsing="false" onAction="#openQueryMedicament" text="Consultar / Actualizar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Facturación">
+                            <items>
+                                <MenuItem fx:id="btnGenerateBilling" mnemonicParsing="false" onAction="#openGenerateBilling" text="Generar" />
+                                <MenuItem fx:id="btnQueryBilling" mnemonicParsing="false" onAction="#openQueryBilling" text="Consultar" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Administración del Sistema">
+                            <items>
+                                <Menu mnemonicParsing="false" text="Administración de Usuarios">
+                                    <items>
+                                        <MenuItem fx:id="btnRegisterUser" mnemonicParsing="false" onAction="#openRegisterUser" text="Registrar" />
+                                        <MenuItem fx:id="btnQueryUser" mnemonicParsing="false" onAction="#openQueryUser" text="Consultar / Actualizar" />
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <Menu mnemonicParsing="false" text="Administración de Parámetros">
+                                    <items>
+                                        <MenuItem fx:id="btnRegisterParameter" mnemonicParsing="false" onAction="#openRegisterParameter" text="Registrar" />
+                                        <MenuItem fx:id="btnQueryParameter" mnemonicParsing="false" onAction="#openQueryParameter" text="Consultar / Actualizar" />
+                                    </items>
+                                </Menu>
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <Menu mnemonicParsing="false" text="Auditoria">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Registrar" />
+                                    </items>
+                                </Menu>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <HBox fx:id="hBoxRectangle" alignment="CENTER" layoutY="50.0" prefHeight="70.0" prefWidth="1920.0">
+                    <children>
+                        <Label text="Registrar" textFill="#ab6e6e">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <Pane prefHeight="70.0" prefWidth="550.0" />
+                        <Label text="Gestión de Parámetros" textFill="#ab6e6e">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <Pane prefHeight="100.0" prefWidth="350.0" />
+                        <Label fx:id="lblHour" text="dd/mm/yyyy - hh:mm:ss" textFill="#ab6e6e" visible="false">
+                            <font>
+                                <Font name="Arial Bold" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <Pane layoutY="370.0" prefHeight="638.0" prefWidth="1920.0">
+            <children>
+                <ImageView fitHeight="638.0" fitWidth="1920.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/background-dash.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnBackHome" alignment="CENTER" layoutX="1569.0" layoutY="14.0" mnemonicParsing="false" onAction="#openDashboardHome" prefHeight="40.0" prefWidth="174.0" text="Volver al Inicio">
+                    <font>
+                        <Font name="Arial" size="14.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/home-icon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <VBox layoutX="810.0" layoutY="105.0" prefHeight="428.0" prefWidth="300.0">
+                    <children>
+                          <Label alignment="CENTER" prefWidth="300.0" styleClass="label-item" text="Tarifa IVA" />
+                          <TextField fx:id="txtIvaTarife" alignment="CENTER" prefHeight="28.0" prefWidth="300.0" styleClass="textf-item" />
+                  <Label fx:id="lblIvaTarife" alignment="CENTER" prefWidth="300.0" text="Tarifa de IVA no válida" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                          <Label alignment="CENTER" prefWidth="300.0" styleClass="label-item" text="Grava ICE">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="txtIceGrava" prefWidth="300.0" styleClass="textf-item" />
+                  <Label fx:id="lblIceGrava" alignment="CENTER" prefWidth="300.0" text="Grava ICE no válido" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                          <Label alignment="CENTER" prefWidth="300.0" styleClass="label-item" text="Código ICE">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                          <TextField fx:id="txtIceCode" alignment="CENTER" prefWidth="300.0" styleClass="textf-item" />
+                  <Label fx:id="lblIceCode" alignment="CENTER" prefWidth="300.0" text="Código ICE no válido" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                          <Label alignment="CENTER" prefWidth="300.0" styleClass="label-item" text="Indicador de Turismo">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="txtTurism" prefWidth="300.0" styleClass="textf-item" />
+                  <Label fx:id="lblTurism" alignment="CENTER" prefWidth="300.0" text="Indicador de Turismo no válido" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefWidth="300.0" styleClass="label-item" text="IVA">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIva" alignment="CENTER" prefWidth="300.0" styleClass="textf-item" />
+                  <Label fx:id="lblIva" alignment="CENTER" prefWidth="300.0" text="IVA no válido" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" layoutX="760.0" layoutY="553.0" prefHeight="40.0" prefWidth="400.0" spacing="100.0">
+                    <children>
+                        <Button fx:id="btnCancel" alignment="CENTER" mnemonicParsing="false" onAction="#cancelRegister" prefHeight="40.0" prefWidth="125.0" text="Cancelar">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/cancel-icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnSave" alignment="CENTER" mnemonicParsing="false" onAction="#saveRegister" prefHeight="36.0" prefWidth="125.0" text="Guardar">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/save-icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+                  <Label alignment="CENTER" layoutX="810.0" layoutY="62.0" prefWidth="300.0" styleClass="label-item" text="2 Parámetros ">
+                      <padding>
+                          <Insets left="20.0" />
+                      </padding>
+                  </Label>
+            </children>
+        </Pane>
+    </children>
+</Pane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="400.0" stylesheets="@../styles/notifications.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.prototype.cm2a.components.ExpirationNotification">
+    <children>
+        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="400.0">
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                    <image>
+                        <Image url="@../images/expiration.png" />
+                    </image></ImageView>
+                <VBox alignment="CENTER" prefHeight="75.0" prefWidth="290.0" spacing="3.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="290.0">
+                            <children>
+                                <Label fx:id="lblCode" alignment="CENTER" prefWidth="50.0" text="000">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefWidth="220.0" text="Medicamento a punto de vencerse" textFill="RED">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Label fx:id="lblName" prefWidth="290.0" text="Nombre">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="23.0" />
+                            </padding>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="290.0">
+                            <children>
+                                <Label prefWidth="70.0" text="Vence el:">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                </Label>
+                                <Label fx:id="lblDate" alignment="CENTER_RIGHT" prefWidth="184.0" text="5" textFill="RED">
+                                    <font>
+                                        <Font name="Arial" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</Pane>

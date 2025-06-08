@@ -1,0 +1,8 @@
+.btns-log {
+    -fx-background-color: #bddaf3;
+    -fx-background-radius: 20px;
+}
+.btns-log:hover{
+    -fx-background-color: #8cbaee;
+    -fx-text-fill: white;
+}
